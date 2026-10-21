@@ -14,6 +14,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
+  // Keep the current page visibly highlighted in the navigation.
+  const currentPage = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+  document.querySelectorAll(".main-nav a[href]").forEach(link => {
+    const targetPage = link.getAttribute("href").split("/").pop().split("?")[0].toLowerCase();
+    if (targetPage === currentPage) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  // Make in-page links scroll smoothly when supported by the browser.
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      }
+    });
+  });
+
   document.querySelectorAll("[data-year]").forEach(el => {
     el.textContent = new Date().getFullYear();
   });
