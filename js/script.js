@@ -26,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (productField && product) productField.value = product;
   if (productField && service) productField.value = service;
   if (messageField && (product || service)) {
-    messageField.value = product ? "Hello Tsimsaro, I would like to enquire about ordering " + product + ". Please share availability and delivery details." : "Hello Tsimsaro, I would like to enquire about " + service + ". Please share the next steps.";
+    messageField.value = product
+      ? "Hello Tsimsaro, I would like to enquire about ordering " + product + ". Please share availability and delivery details."
+      : "Hello Tsimsaro, I would like to enquire about " + service + ". Please share the next steps.";
   }
 
   const form = document.querySelector("#enquiry-form");
@@ -40,11 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const interest = (data.get("interest") || "General enquiry").toString();
       const message = (data.get("message") || "").toString().trim();
       const status = document.querySelector("#form-status");
-      const businessWhatsApp = ""; // Add Tsimsaro's WhatsApp number here, digits only, with country code (e.g. 2547XXXXXXXX).
-      if (!businessWhatsApp) {
-        status.textContent = "Your message is ready, but online sending is not configured yet. Please add Tsimsaro's WhatsApp number in js/script.js or connect a form service before publishing.";
-        return;
-      }
+      const businessWhatsApp = "254716695147";
       const text = [
         "Hello Tsimsaro Investment Limited,",
         "Name: " + name,
@@ -53,8 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "Enquiry: " + interest,
         "Message: " + message
       ].filter(Boolean).join("\n");
-      window.open("https://wa.me/" + businessWhatsApp + "?text=" + encodeURIComponent(text), "_blank", "noopener,noreferrer");
-      status.textContent = "WhatsApp has opened with your enquiry. Please send the message there to complete your request.";
+      const whatsappUrl = "https://wa.me/" + businessWhatsApp + "?text=" + encodeURIComponent(text);
+      const newWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      if (newWindow) {
+        status.textContent = "WhatsApp has opened with your enquiry. Please press Send in WhatsApp to complete your message.";
+      } else {
+        status.textContent = "If WhatsApp did not open automatically, use the WhatsApp link in the contact details and send your enquiry.";
+        window.location.href = whatsappUrl;
+      }
     });
   }
 });
