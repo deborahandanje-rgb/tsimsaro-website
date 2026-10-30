@@ -126,7 +126,7 @@ z-index:1
     background-size:cover;
     background-position:center;
 }
-.page-hero{
+.products-hero{
     background-image:linear-gradient(90deg,rgba(7,45,30,.45),rgba(7,45,30,.15)),
     url("../images/products-hero-bg.jpg");
     background-size:cover;
