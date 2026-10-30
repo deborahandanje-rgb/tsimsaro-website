@@ -90,3 +90,27 @@ z-index:1
     background-position:center;
 }
 .product-art .kunde-product-image{width:100%;height:100%;object-fit:cover;}
+.catalog-art.art-avocado{
+    background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
+    url("../images/avocados.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.catalog-art.art-jackfruit{
+    background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
+    url("../images/jackfruit.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.catalog-art.art-banana{
+    background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
+    url("../images/bananas.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.catalog-art.art-pumpkin{
+    background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
+    url("../images/pumpkin.jpg");
+    background-size:cover;
+    background-position:center;
+}
