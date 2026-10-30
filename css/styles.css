@@ -126,3 +126,7 @@ z-index:1
     background-size:cover;
     background-position:center;
 }
+.fertilizer-symbol{
+    background:linear-gradient(0deg,rgba(31,44,20,.18),rgba(31,44,20,.02)),
+    url("../images/manure.jpg") center/cover no-repeat;
+}
