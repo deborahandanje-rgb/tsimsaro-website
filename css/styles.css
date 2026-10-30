@@ -116,15 +116,22 @@ z-index:1
 }
 .catalog-art.art-kunde{
     background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
-    url("../images/kunde%20bites.jpg");
+    url("../images/kunde-bites.jpg");
     background-size:cover;
     background-position:center;
 }
 .catalog-art.art-pumpkin-bites{
     background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
-    url("../images/pumpkin%20bites.jpg");
+    url("../images/pumpkin bites.jpg");
     background-size:cover;
     background-position:center;
+}
+.page-hero{
+    background-image:linear-gradient(90deg,rgba(7,45,30,.88),rgba(7,45,30,.48)),
+    url("../images/products-hero-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 .fertilizer-symbol{
     background:linear-gradient(0deg,rgba(31,44,20,.18),rgba(31,44,20,.02)),
