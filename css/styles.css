@@ -42,3 +42,4 @@ z-index:1
 /* Product pouch photos */
 .catalog-art.catalog-product-photo{background:#f7f4e9;padding:12px;}
 .catalog-art.catalog-product-photo img{width:100%;height:100%;object-fit:contain;display:block;border-radius:8px;}
+.product-art .kunde-product-image{width:100%;height:100%;object-fit:cover;}
