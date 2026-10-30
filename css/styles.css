@@ -114,3 +114,15 @@ z-index:1
     background-size:cover;
     background-position:center;
 }
+.catalog-art.art-kunde{
+    background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
+    url("../images/kunde%20bites.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.catalog-art.art-pumpkin-bites{
+    background-image:linear-gradient(0deg,rgba(31,44,20,.2),rgba(31,44,20,.02)),
+    url("../images/pumpkin%20bites.jpg");
+    background-size:cover;
+    background-position:center;
+}
